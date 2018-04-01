@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>todomvc</title>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/todomvc.css">
+</head>
+<body>	
+	<div id="moblie_bar"><!-- 移动端导航栏 -->
+		<div class="left_bar" id="target_area">
+			<div class="left_bar_inner">
+				<ul class="left_bar_ul">
+					<li class="left_bar_search">
+						<i class="iconfont icon-sousuo"></i>
+						<input type="text" id="moblie_search" >
+					</li>
+					<li>
+						<a href="#" class="study_a">
+							学习  
+						</a>
+						<ul class="study_ul">
+							<li>
+								<a href="https://cn.vuejs.org/v2/guide/">
+									教程
+								</a>
+							</li>
+							<li>
+								<a href="https://cn.vuejs.org/v2/api/">
+									API
+								</a>
+							</li>
+							<li>
+								<a href="https://cn.vuejs.org/v2/style-guide/">
+									风格指南(beta)
+								</a>
+							</li>
+							<li>
+								<a href="https://cn.vuejs.org/v2/examples/" class="sample">
+									示例
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							生态系统
+						</a>
+						<ul class="margin_left_1em">
+							<li>
+								帮助
+							</li>
+							<ul class="margin_left_1em">
+								<li>
+									<a href="https://forum.vuejs.org/">
+										论坛
+									</a>
+								</li>
+								<li>
+									<a href="https://chat.vuejs.org/">
+										聊天室
+									</a>
+								</li>
+							</ul>							
+							<li>	
+								工具
+							</li>
+							<ul class="margin_left_1em">
+								<li>
+									<a href="https://github.com/vuejs/vue-devtools">
+										Devtools
+									</a>
+								</li>
+								<li>
+									<a href="https://vuejs-templates.github.io/webpack">
+										webpack 模板
+									</a>
+								</li>
+								<li>
+									<a href="https://vue-loader.vuejs.org/">
+										Vue Loader
+									</a>
+								</li>
+							</ul>							
+							<li >
+								核心插件													
+							</li>
+							<ul class="margin_left_1em">
+								<li>
+									<a href="https://router.vuejs.org/">
+										Vue Router
+									</a>
+								</li>
+								<li>
+									<a href="https://vuex.vuejs.org/">
+										Vuex
+									</a>
+								</li>
+								<li>
+									<a href="https://ssr.vuejs.org/">
+										Vue 服务端渲染
+									</a>
+								</li>
+							</ul>
+							<li>
+								信息		
+							</li>
+							<ul class="margin_left_1em">
+								<li>
+									<a href="https://github.com/vuejs/roadmap">
+										Roadmap
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/vuejs">
+										Twitter
+									</a>
+								</li>
+								<li>
+									<a href="https://medium.com/the-vue-point">
+										博客
+									</a>
+								</li>
+								<li>
+									<a href="https://vuejobs.com/?ref=vuejs">
+										工作
+									</a>
+								</li>
+							</ul>
+							<li >
+								资源列表
+							</li>
+							<ul class="margin_left_1em">
+								<li>
+									<a href="https://github.com/vuejs">
+										官方仓库
+									</a>
+								</li>
+								<li>
+									<a href="https://curated.vuejs.org/">
+										Vue优选
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/vuejs/awesome-vue">
+										Vue资源
+									</a>
+								</li>
+							</ul>						
+						</ul>			
+					</li>
+					<li class="margin_left_1em">
+						<a href="https://cn.vuejs.org/v2/guide/team.html" class="team_a">
+							团队
+						</a>
+					</li>
+					<li>
+						<li>
+							<a href="https://cn.vuejs.org/support-vuejs/">
+								支持Vue
+							</a>
+						</li>
+						<ul class="margin_left_2em">
+							<li>
+								<a href="https://cn.vuejs.org/support-vuejs/#One-time-Donations" target="_blank">
+									一次性赞助
+								</a>
+							</li>
+							<li>
+								<a href="https://cn.vuejs.org/support-vuejs/#Recurring-Pledges">
+									周期性赞助
+								</a>
+							</li>
+							<li>
+								<a href="https://vue.threadless.com/">
+									T 恤商店
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<li>
+							<a href="" >
+								多语言
+							</a>
+						</li>
+						<ul class="margin_left_1em">
+							<li>
+								<a href="https://vuejs.org/v2/examples/todomvc.html" target="_blank">
+									English
+								</a>
+							</li>
+							<li>
+								<a href="https://jp.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									日本語
+								</a>
+							</li>
+							<li>
+								<a href="https://ru.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									Русский
+								</a>
+							</li>
+							<li>
+								<a href="https://kr.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									한국어
+								</a>
+							</li>
+							<li>
+								<a href="https://br.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									Português
+								</a>
+							</li>
+							<li>
+								<a href="https://fr.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									Français
+								</a>
+							</li>
+							<li>
+								<a href="https://vi.vuejs.org/v2/examples/todomvc.html" target="_blank">
+									Tiếng Việt
+								</a>
+							</li>
+							<li class="">
+								<a href="https://github.com/vuejs/cn.vuejs.org/" class="translate_a">
+									参与翻译
+								</a>
+							</li>
+						</ul>			
+					</li>	
+					</li>
+				</ul>
+				<div class="sponsors">
+					<span>
+						赞助者
+					</span>
+					<br>
+					<a href="https://xiaozhuanlan.com/front-end-interview">
+						<img src="images/ad.jpeg" class="sponsors_pic">
+					</a>					
+					<br>
+					<button>
+						成为赞助者
+					</button>
+				</div>
+				<h2>
+					示例
+					<select name="" id="">
+						<option>
+							2.x
+						</option>
+						<option>
+							1.x
+						</option>
+					</select>
+				</h2>
+				<ul class="slideNav_ul">
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/index.html" class="slideNav">
+							Markdown 编辑器
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/commits.html" class="slideNav">
+							GitHub 提交
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/grid-component.html" class="slideNav">
+							网格组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/tree-view.html" class="slideNav">
+							树形视图
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/svg.html" class="slideNav">
+							SVG图表
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/modal.html" class="slideNav">
+							模式组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/elastic-header.html" class="slideNav">
+							具有伸缩性的 Header
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/select2.html" class="slideNav">
+							内嵌组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/deepstream.html" class="slideNav">
+							实时 deepstreamHub
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/todomvc.html" class="slideNav">
+							Firebase + 验证
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/todomvc.html" class="slideNav todomvc_a">
+							TodoMVC
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/hackernews.html"  class="slideNav">
+							HackerNews 克隆
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="images/menu.png" alt="" class="nav_img" id="nav_id">
+		<a href="https://cn.vuejs.org/">
+			<img src="images/logo.png" alt="">
+		</a>		
+	</div>
+	<div class="header"> <!--顶部-->
+		<a href="https://cn.vuejs.org/" id="logo">
+			<img src="images/logo.png">
+			<span>
+				Vue.js
+			</span>
+		</a>
+		<ul class="nav">
+			<li>
+				<i class="iconfont icon-sousuo"></i>
+				<input type="text" id="search">
+			</li>		
+			<li class="nav_dropdown_contioner learn">
+				<ul class="dropdown_contioner">
+					<li>
+
+						<a href="https://cn.vuejs.org/v2/guide/">
+							教程
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/api/">
+							API
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/style-guide/">
+							风格指南(beta)
+						</a>
+					</li>
+					<li>
+						<span class="arrow">
+							
+						</span>
+						<a href="https://cn.vuejs.org/v2/examples/">
+							示例
+						</a>
+					</li>
+				</ul>
+				<a href="#" class="learn_a">
+					学习  
+				</a>
+				<i class="iconfont icon-xiaosanjiaodown"></i>
+			</li>
+			<li class="nav_dropdown_contioner ecosystem">
+				<ul class="dropdown_contioner">
+					<li>
+						<h4>
+							帮助
+						</h4>
+					</li>
+					<li>
+						<a href="https://forum.vuejs.org/">
+							论坛
+						</a>
+					</li>
+					<li>
+						<a href="https://chat.vuejs.org/">
+							聊天室
+						</a>
+					</li>
+					<li class="top_line">
+						<h4 >
+							工具
+						</h4>
+					</li>
+					<li>
+						<a href="https://github.com/vuejs/vue-devtools">
+							Devtools
+						</a>
+					</li>
+					<li>
+						<a href="https://vuejs-templates.github.io/webpack">
+							webpack 模板
+						</a>
+					</li>
+					<li>
+						<a href="https://vue-loader.vuejs.org/">
+							Vue Loader
+						</a>
+					</li>
+					<li class="top_line">
+						<h4 >
+							核心插件
+						</h4>
+					</li>
+					<li>
+						<a href="https://router.vuejs.org/">
+							Vue Router
+						</a>
+					</li>
+					<li>
+						<a href="https://vuex.vuejs.org/">
+							Vuex
+						</a>
+					</li>
+					<li>
+						<a href="https://ssr.vuejs.org/">
+							Vue 服务端渲染
+						</a>
+					</li>
+					<li class="top_line">
+						<h4 >
+							信息
+						</h4>
+					</li>
+					<li>
+						<a href="https://github.com/vuejs/roadmap">
+							Roadmap
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/vuejs">
+							Twitter
+						</a>
+					</li>
+					<li>
+						<a href="https://medium.com/the-vue-point">
+							博客
+						</a>
+					</li>
+					<li>
+						<a href="https://vuejobs.com/?ref=vuejs">
+							工作
+						</a>
+					</li>
+					<li class="top_line">
+						<h4 >
+							资源列表
+						</h4>
+					</li>
+					<li>
+						<a href="https://github.com/vuejs">
+							官方仓库
+						</a>
+					</li>
+					<li>
+						<a href="https://curated.vuejs.org/">
+							Vue优选
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/vuejs/awesome-vue">
+							Vue资源
+						</a>
+					</li>
+				</ul>
+				<a href="">
+					生态系统
+				</a>
+				<i class="iconfont icon-xiaosanjiaodown"></i>
+			</li>
+			<li class="nav_dropdown_contioner team">
+				<a href="https://cn.vuejs.org/v2/guide/team.html" class="team_a">
+					团队
+				</a>
+			</li>
+			<li class="nav_dropdown_contioner support_vuejs">
+				<ul class="dropdown_contioner">
+					<li>
+						<a href="https://cn.vuejs.org/support-vuejs/#One-time-Donations" target="_blank">
+							一次性赞助
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/support-vuejs/#Recurring-Pledges">
+							周期性赞助
+						</a>
+					</li>
+					<li>
+						<a href="https://vue.threadless.com/">
+							T 恤商店
+						</a>
+					</li>
+				</ul>
+				<a href="">
+					支持 Vue
+				</a>
+				<i class="iconfont icon-xiaosanjiaodown"></i>
+			</li>
+			<li class="nav_dropdown_contioner multilanguage">
+				<ul class="dropdown_contioner">
+					<li>
+						<a href="https://vuejs.org/v2/examples/todomvc.html" target="_blank">
+							English
+						</a>
+					</li>
+					<li>
+						<a href="https://jp.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							日本語
+						</a>
+					</li>
+					<li>
+						<a href="https://ru.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							Русский
+						</a>
+					</li>
+					<li>
+						<a href="https://kr.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							한국어
+						</a>
+					</li>
+					<li>
+						<a href="https://br.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							Português
+						</a>
+					</li>
+					<li>
+						<a href="https://fr.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							Français
+						</a>
+					</li>
+					<li>
+						<a href="https://vi.vuejs.org/v2/examples/todomvc.html" target="_blank">
+							Tiếng Việt
+						</a>
+					</li>
+				</ul>
+				<a href="" class="multilanguage_a">
+					多语言
+				</a>
+				<i class="iconfont icon-xiaosanjiaodown"></i>
+			</li>
+			<li class="nav_dropdown_contioner translate">
+				<a href="https://github.com/vuejs/cn.vuejs.org/" class="translate_a">
+					参与翻译
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="body">
+		<div class="slideBar_container">
+			<div class="slideBar">
+				<div class="sponsors">
+					<span>
+						赞助者
+					</span>
+					<br>
+					<a href="https://xiaozhuanlan.com/front-end-interview">
+						<img src="images/ad.jpeg" class="sponsors_pic">
+					</a>					
+					<br>
+					<button>
+						成为赞助者
+					</button>
+				</div>
+				<h2>
+					示例
+					<select name="" id="">
+						<option>
+							2.x
+						</option>
+						<option>
+							1.x
+						</option>
+					</select>
+				</h2>
+				<ul class="slideNav_ul">
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/index.html" class="slideNav">
+							Markdown 编辑器
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/commits.html" class="slideNav">
+							GitHub 提交
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/grid-component.html" class="slideNav">
+							网格组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/tree-view.html" class="slideNav">
+							树形视图
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/svg.html" class="slideNav">
+							SVG图表
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/modal.html" class="slideNav">
+							模式组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/elastic-header.html" class="slideNav">
+							具有伸缩性的 Header
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/select2.html" class="slideNav">
+							内嵌组件
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/deepstream.html" class="slideNav">
+							实时 deepstreamHub
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/todomvc.html" class="slideNav">
+							Firebase + 验证
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/todomvc.html" class="slideNav todomvc_a">
+							TodoMVC
+						</a>
+					</li>
+					<li>
+						<a href="https://cn.vuejs.org/v2/examples/hackernews.html"  class="slideNav">
+							HackerNews 克隆
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="body_center">
+			<a href="https://time.geekbang.org/column/intro/48?utm_source=website&utm_medium=vue&utm_campaign=201801chenhao&utm_content=chenhaobanner" id="ad_a">
+				<img src="images/ad2.gif" class="ad">
+			</a>
+			<h1>
+				TodoMVC Example
+			</h1>
+			<blockquote class="quote">
+				<p>
+					本例是一个完全和规范一致的 TodoMVC 实现，只用了 120 行有效的 JavaScript (不包含注释和空行)。
+				</p>
+			</blockquote>
+			<p  class="note">
+				Note that if your web browser is configured to block 3rd-party data/cookies, the example below will not work, as the <code>localStorage</code> data will fail to be saved from JSFiddle. You’ll have to click on <code>Edit in JSFiddle</code> to see the live result.
+			</p>
+			<div class="show_content">
+				<ul class="show_content_nav">
+					<li class="jsfiddle">
+						<a href="" class="jsfiddle_a">
+							<span>
+								Edit in JSFiddle
+							</span>
+														
+							<i class="iconfont icon-jsfiddle">					
+							</i>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#result" class="result_a">
+							Result
+						</a>
+					</li>
+					<li>
+						<a href="#html_text" class="html_a">
+							HTML
+						</a>
+					</li>
+					<li>
+						<a href="#js_text" class="js_a">
+							JavaScript
+						</a>
+					</li>
+					<li>
+						<a href="#css_text" class="css_a">
+							CSS
+						</a>
+					</li>
+					
+				</ul>
+				<div class="content_containter">
+					<div class="result_containter" id="result">
+						<h1>
+							todos
+						</h1>
+						<div class="todo_containter">
+							<div class="todoapp">
+								<div class="toggle_all">
+									
+								</div>
+								<input type="text" placeholder="What needs to be done?" name="" class="todo_input">
+								<ul class="todo_ul"></ul>
+								<div class="menu menu_none">
+									<span class="count_lefts">
+										<strong class="number">
+											3
+										</strong>
+										 items left
+									</span>
+									<button class="all all_change">
+										All
+									</button>
+									<button class="active">
+										Active
+									</button>
+									<button class="completed">
+										Completed
+									</button>
+									<button class="clear">
+										Clear completed
+									</button>
+									<div class="shadow"></div>
+									<div class="shadow1"></div>
+									
+								</div>
+							</div>
+							<div class="footer">
+								<p>
+									Double-click to edit a todo
+								</p>
+								<p>
+									Written by <a href="http://evanyou.me/">Evan You</a> 
+								</p>
+								<p>
+									Part of <a href="http://todomvc.com/">TodoMVC</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="result_containter" id="html_text">
+						<pre class="pre_containter">
+<<span>section</span> <pre>class</pre>>=<code>"todoapp"</code>>
+  <<span>header</span> <pre>class</pre>>=<code>"header"</code>>
+    <<span>h1</span>>todos&lt;/<span>h1</span>>
+    <<span>input</span> <pre>class</pre>=<code>"new-todo"</code>
+      <pre>autofocus autocomplete</pre>=<code>"off"</code>
+      <pre>placeholder</pre>=<code>"What needs to be done?"</code>
+      <pre>v-model</pre>=<code>"newTodo"</code>
+      @<pre>keyup.enter</pre>=<code>"addTodo"</code>>
+  &lt;/<span>header</span>>
+  <<span>section</span> <pre>class</pre>=<code>"main"></code> <pre>v-show</pre>=<code>"todos.length"</code> <pre>v-cloak</pre>>
+    <<span>input</span> <pre>class</pre>=<code>"toggle-all"</code> <pre>type</pre>=<code>"checkbox"</code> <pre>v-model</pre>=<code>"allDone"</code>>
+    <<span>ul</span> <pre>class</pre>=<code>"todo-list"</code>>
+      <<span>li</span> <pre>v-for</pre>=<code>"todo in filteredTodos"</code>
+        <pre>class</pre>=<code>"todo"</code>
+        <pre>:key</pre>=<code>"todo.id"</code>
+        <pre>:class</pre>=<code>"{ completed: todo.completed, editing: todo == editedTodo }"</code>>
+        <<span>div</span> <pre>class</pre>=<code>"view"</code>>
+          <<span>input</span> <pre>class</pre>=<code>"toggle"</code> <pre>type</pre>=<code>"checkbox"</code> <pre>v-model</pre>=<code>"todo.completed"</code>>
+          <<span>label</span> @<pre>dblclick</pre>=<code>"editTodo(todo)"</code>>{{ todo.title }}&lt;/<span>label</span>>
+          <<span>button</span> <pre>class</pre>=<code>"destroy"</code> @<pre>click</pre>=<code>"removeTodo(todo)"</code>>&lt;/<span>button</span>>
+        &lt;/<span>div</span>>
+        <<span>input</span> <pre>class</pre>=<code>"edit"</code> <pre>type</pre>=<code>"text"</code>
+          <pre>v-model</pre>=<code>"todo.title"</code>
+          <pre>v-todo-focus</pre>=<code>"todo == editedTodo"</code>
+          @<pre>blur</pre>=<code>"doneEdit(todo)"</code>
+          @<pre>keyup.enter</pre>=<code>"doneEdit(todo)"</code>
+          @<pre>keyup.esc</pre>=<code>"cancelEdit(todo)"</code>>
+      &lt;/<span>li</span>>
+    &lt;/<span>ul</span>>
+  &lt;/<span>section</span>>
+  <<span>footer</span> <pre>class</pre>=<code>"footer"</code> <pre>v-show</pre>=<code>"todos.length"</code> <pre>v-cloak</pre>>
+    <<span>span</span> <pre>class</pre>=<code>"todo-count"</code>>
+      <<span>strong</span>>{{ remaining }}&lt;/<span>strong</span>> {{ remaining | pluralize }} left
+    &lt;/<span>span</span>>
+    <<span>ul</span> <pre>class</pre>=<code>"filters"</code>>
+      <<span>li</span>><<span>a</span> <pre>href</pre>=<code>"#/all"</code> <pre>:class</pre>=<code>"{ selected: visibility == 'all' }"</code>>All&lt;/<span>a</span>>&lt;/<span>li</span>>
+      <<span>li</span>><<span>a</span> <pre>href</pre>=<code>"#/active"</code> <pre>:class</pre>=<code>"{ selected: visibility == 'active' }"</code>>active&lt;/<span>a</span>>&lt;/<span>li</span>>
+      <<span>li</span>><<span>a</span> <pre>href</pre>=<code>"#/completed"</code> <pre>:class</pre>=<code>"{ selected: visibility == 'completed' }"</code>>completed&lt;/<span>a</span>>&lt;/<span>li</span>>
+    &lt;/<span>ul</span>>
+    <<span>button</span> <pre>class</pre>=<code>"clear-completed"</code> @<pre>click</pre>=<code>"removeCompleted"</code> <pre>v-show</pre>=<code>"todos.length > remaining"</code>>
+      Clear completed
+    &lt;/<span>button</span>>
+  &lt;/<span>footer</span>>
+&lt;/<span>section</span>>
+<<span>footer</span> <pre>class</pre>=<code>"info"</code>>
+  <<span>p</span>>Double-click to edit a todo&lt;/<span>p</span>>
+  <<span>p</span>>Written by <<span>a</span> <pre>href</pre>=<code>"http://evanyou.me"</code>>Evan You&lt;/<span>a</span>>&lt;/<span>p</span>>
+  <<span>p</span>>Part of <<span>a</span> <pre>href</pre>=<code>"http://todomvc.com"</code>>TodoMVC&lt;/<span>a</span>>&lt;/<span>p</span>>
+&lt;<span>footer</span>></pre>
+					</div>
+					<div class="result_containter" id="js_text">
+						<pre class="pre_js">
+<code>// Full spec-compliant TodoMVC with localStorage persistence</code>
+<code>// and hash-based routing in ~120 effective lines of JavaScript.</code>
+
+<code>// localStorage persistence</code>
+<span class="key">var</span> STORAGE_KEY = <span class="greenColor">'todos-vuejs-2.0'</span>>
+<span class="key">var</span> todoStorage = {
+  <span class="key">fetch</span>: <span class="key">function</span> () {
+    <span class="key">var</span> todos = <span class="purpleColor">JSON</span>.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    todos.forEach(<span class="key">function</span> (<span class="purpleColor">todo</span>, <span class="purpleColor">index</span>) {
+      todo.id = index
+    })
+    todoStorage.uid = todos.length
+    <span class="key">return</span> todos
+  },
+  <span class="key">save</span>: <span class="key">function</span> (<span class="purpleColor">todos</span>) {
+    localStorage.setItem(STORAGE_KEY, <span class="purpleColor">JSON</span>.stringify(todos))
+  }
+}
+
+<code>// visibility filters</code>
+<span class="key">var</span> filters = {
+  <span class="key">all</span>: <span class="key">function</span> (<span class="purpleColor">todos</span>) {
+    <span class="key">return</span> todos
+  },
+  <span class="key">active</span>: <span class="key">function</span> (<span class="purpleColor">todos</span>) {
+    <span class="key">return</span> todos.filter(<span class="key">function</span> (<span class="purpleColor">todo</span>) {
+      <span class="key">return</span> !todo.completed
+    })
+  },
+  <span class="key">completed</span>: <span class="key">function</span> (<span class="purpleColor">todos</span>) {
+    <span class="key">return</span> todos.filter(<span class="key">function</span> (<span class="purpleColor">todo</span>) {
+      <span class="key">return</span> todo.completed
+    })
+  }
+}
+
+<code>// app Vue instance</code>
+<span class="key">var</span> app = <span class="key">new</span> Vue({
+  // app initial state
+  data: {
+    <span class="key">todos</span>: todoStorage.fetch(),
+    <span class="key">newTodo</span>:<span class="greenColor"> ''</span>,
+    <span class="key">editedTodo</span>: <span class="purpleColor">null</span>,
+    <span class="key">visibility</span>: <span class="greenColor">'all'</span>
+  },
+
+  <code>// watch todos change for localStorage persistence</code>
+  watch: {
+    <span class="key">todos</span>: {
+      <span class="key">handler</span>: function (<span class="purpleColor">todos</span>) {
+        todoStorage.save(todos)
+      },
+      <span class="key">deep</span>: <span class="purpleColor">true</span>
+    }
+  },
+
+  <code>// computed properties</code>
+  <code>// http://vuejs.org/guide/computed.html</code>
+  computed: {
+    <span class="key">ilteredTodos</span>: <span class="key">function</span> () {
+      <span class="key">return</span> filters[<span class="key">this</span>.visibility](<span class="key">this</span>.todos)
+    },
+    <span class="key">remaining</span>: <span class="key">function</span> () {
+      <span class="key">return</span> filters.active(<span class="key">this</span>.todos).length
+    },
+    <span class="key">allDone</span>: {
+      <span class="key">get</span>: <span class="key">function</span> () {
+        <span class="key">return</span> <span class="key">this</span>.remaining ===<span class="key"> 0</span>
+      },
+      <span class="key">set</span>: <span class="key">function</span> (<span class="purpleColor">value</span>) {
+        <span class="key">this</span>.todos.forEach(<span class="key">function</span> (<span class="purpleColor">todo</span>) {
+          todo.completed = value
+        })
+      }
+    }
+  },
+
+  <span class="key">filters</span>: {
+    <span class="key">pluralize</span>: <span class="key">function</span> (<span class="purpleColor">n</span>) {
+      <span class="key">return</span> n === <span class="key">1</span> ?<span class="greenColor"> 'item' </span>: <span class="greenColor">'items'</span>
+    }
+  },
+
+  <code>// methods that implement data logic.</code>
+  <code>// note there's no DOM manipulation here at all.</code>
+  methods: {
+    <span class="key">addTodo</span>: <span class="key">function</span> () {
+      <span class="key">var</span> value = <span class="key">this</span>.newTodo && <span class="key">this</span>.newTodo.trim()
+      <span class="key">if</span> (!value) {
+        <span class="key">return</span>
+      }
+      <span class="key">this</span>.todos.push({
+        <span class="key">id</span>: todoStorage.uid++,
+        <span class="key">title</span>: value,
+        <span class="key">completed</span>: <span class="purpleColor">false</span>
+      })
+      <span class="key">this</span>.newTodo = <span class="greenColor">''</span>
+    },
+
+    <span class="key">removeTodo</span>: <span class="key">function</span> (<span class="purpleColor">todo</span>) {
+      <span class="key">this</span>.todos.splice(this.todos.indexOf(todo), 1)
+    },
+
+    <span class="key">editTodo</span>: <span class="key">function</span> (<span class="purpleColor">todo</span>) {
+     <span class="key">this</span>.beforeEditCache = todo.title
+      <span class="key">this</span>.editedTodo = todo
+    },
+
+    <span class="key">doneEdit</span>: <span class="key">function</span> (<span class="purpleColor">todo</span>) {
+      <span class="key">if</span> (!<span class="key">this</span>.editedTodo) {
+        <span class="key">return</span>
+      }
+      <span class="key">this</span>.editedTodo = <span class="purpleColor">null</span>
+      todo.title = todo.title.trim()
+      <span class="key">if</span> (!todo.title) {
+        <span class="key">this.removeTodo</span>(todo)
+      }
+    },
+
+    <span class="key">cancelEdit</span>: <span class="key">function</span> (<span class="purpleColor">todo</span>) {
+      <span class="key">this</span>.editedTodo = <span class="purpleColor">null</span>
+      <span class="key">todo</span>.title = this.beforeEditCache
+    },
+
+    <span class="key">removeCompleted</span>: <span class="key">function</span> () {
+      <span class="key">this</span>.todos = filters.active(<span class="key">this</span>.todos)
+    }
+  },
+
+  <code>// a custom directive to wait for the DOM to be updated</code>
+  <code>// before focusing on the input field.</code>
+  <code>// http://vuejs.org/guide/custom-directive.html</code>
+  directives: {
+    <span class="greenColor">'todo-focus'</span>: <span class="key">function</span> (<span class="purpleColor">el</span>, <span class="purpleColor">binding</span>) {
+      <span class="key">if</span> (<span class="purpleColor">binding</span>.<span class="purpleColor">value</span>) {
+        el.focus()
+      }
+    }
+  }
+})
+
+<code>// handle routing</code>
+<span class="key">function</span> <span class="fnName">onHashChange</span> () {
+  <span class="key">var</span> visibility = <span class="purpleColor">window</span>.location.hash.replace(/#\/?/, '')
+  <span class="key">if</span> (filters[visibility]) {
+    app.visibility = visibility
+  } <span class="key">else</span> {
+    <span class="purpleColor">window</span>.location.hash = ''
+    app.visibility = <span class="greenColor">'all'</span>
+  }
+}
+
+<span class="purpleColor">window</span>.addEventListener(<span class="greenColor">'hashchange'</span>, onHashChange)
+onHashChange()
+
+<code>// mount</code>
+app.$mount(<span class="greenColor">'.todoapp'</span>)</pre>
+					</div>					
+					<div class="result_containter" id="css_text">
+						<pre class="css_pre">[v-cloak] { <span>display</span>: none; }
+						</pre>
+					</div>
+				</div>
+			</div>
+			<div class="page_footer">
+				发现错误？想参与编辑？
+				<a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/v2/examples/todomvc.md">					
+      				在 GitHub 上编辑此页！
+				</a>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jq_todos.js"></script>
+<script type="text/javascript" src="js/other.js"></script>
+
+</html>
